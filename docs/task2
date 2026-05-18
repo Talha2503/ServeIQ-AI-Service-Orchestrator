@@ -1,0 +1,10 @@
+# ServeIQ Landing Page Implementation Tasks
+
+- `[ ]` Restore Chat UI to `app/chatbot/page.tsx`
+- `[ ]` Build Terminal Hacker Landing Page (`app/page.tsx`)
+  - `[ ]` Layout, CSS Grid Background & Navbar
+  - `[ ]` Hero Section with Animated Typing & CTA
+  - `[ ]` Example Scenario Terminal Window
+  - `[ ]` Stats Section
+  - `[ ]` 8 Agent Feature Cards Grid
+  - `[ ]` Footer

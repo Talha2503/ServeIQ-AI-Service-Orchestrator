@@ -1,0 +1,43 @@
+# Landing Page & Routing Restructure Implementation Plan
+
+The goal is to build a sleek, terminal/hacker-aesthetic landing page for ServeIQ that draws inspiration from the provided portfolio link, while preserving the existing AI chatbot functionality by migrating it to a dedicated route.
+
+## Proposed Changes
+
+### 1. Route Restructuring
+To keep the existing functionality intact as requested, the chat UI currently mapped to the root (`/`) must be moved.
+- **`[NEW] app/chatbot/page.tsx`**: I will restore the WhatsApp-style dark mode chat interface that was previously in `app/page.tsx` into this new directory. This ensures the CTA button on the landing page has a functioning target.
+
+### 2. The New Landing Page
+- **`[MODIFY] app/page.tsx`**: This will be entirely rewritten to become the new landing page.
+
+#### Aesthetics & Theming
+- **Background**: Deep dark (`#0a0a0a`) with a subtle CSS grid pattern.
+- **Accents**: Terminal green (`#25d366`) for primary buttons, highlights, and icons.
+- **Typography**: Monospace/terminal font aesthetic for headings and typing effects.
+
+#### Component Breakdown (Mobile-First)
+1. **Navigation Bar**: Simple top bar with links to `/baseline` and `/trace` and a small ServeIQ logo/text.
+2. **Hero Section**: 
+   - A bold heading: "ServeIQ: AI Service Orchestrator"
+   - **Animated Typing Effect**: A rotating tagline (e.g., "Empowering Pakistan's Informal Economy...", "Multi-lingual Intent Processing...", "Autonomous Provider Discovery...").
+   - **CTA Button**: Large, glowing green button pointing to `/chatbot` ("Launch Orchestrator").
+3. **Example Scenario (The "Wow" Factor)**:
+   - A mock terminal or chat window demonstrating Roman Urdu input:
+     - *User*: "Mera AC theek nahi chal raha, koi sasta mechanic bhejo gulshan e iqbal me jaldi"
+     - *System*: Extracting Intent -> Discovering Providers -> Ranking Options -> Pricing...
+4. **Stats Section**: 
+   - 3 clean stat blocks: **8 Specialized Agents**, **10+ Service Providers**, **6+ Ranking Factors**.
+5. **The 8 Agent Feature Cards**:
+   - A CSS grid layout (1 column on mobile, 2 on tablet, 4 on desktop).
+   - Each card represents an agent (Intent, Discovery, Ranking, Pricing, Booking, Notification, Dispute, Follow-up) with a small icon and brief description.
+6. **Footer**: 
+   - Hackathon information, copyright, and built-by credits.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Routing Note**: I am assuming `/baseline` and `/trace` are either existing or planned future routes. Clicking them right now might 404 until they are built, but the links will be present. Is this acceptable?
+
+> [!TIP]
+> Does the plan align with your vision for the terminal/hacker aesthetic? If you approve, I will first restore the Chat UI to `/chatbot` and then build the Landing Page in `app/page.tsx`.
