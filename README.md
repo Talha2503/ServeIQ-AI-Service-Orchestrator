@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![ServeIQ Banner](screenshots/banner.png)
-
 **Next-Gen Agentic AI Platform powered by Google Antigravity**
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://serve-iq-ai-service-orchestrator.vercel.app)
@@ -252,40 +250,47 @@ Handles complaints, refunds, escalations, and blacklisting.
 
 ---
 
-## 📦 Provider Dataset Schema
+📦 Provider Dataset Schema
+Each provider in the ServeIQ dataset contains the following fields:
+Identity & Service
 
-```json
-{
-  "id": "PRV-001",
-  "name": "Ustad Ahmed",
-  "service": "AC Technician",
-  "specialization": ["Split AC", "Inverter AC", "Central AC"],
-  "location": {
-    "area": "G-13",
-    "city": "Islamabad",
-    "lat": 33.6844,
-    "lng": 73.0479
-  },
-  "rating": 4.8,
-  "reviewCount": 127,
-  "lastReviewDate": "2026-05-15",
-  "onTimeScore": 0.96,
-  "cancellationRate": 0.02,
-  "pricePerHour": 1200,
-  "visitFee": 300,
-  "experience": 8,
-  "availability": {
-    "monday": ["09:00", "10:00", "14:00"],
-    "tuesday": ["09:00", "11:00"]
-  },
-  "capacity": 3,
-  "loyaltyDiscount": 0.1,
-  "riskScore": 0.05,
-  "verified": true,
-  "tools": ["Multimeter", "Refrigerant Kit", "Vacuum Pump"],
-  "languages": ["Urdu", "Punjabi"]
-}
-```
+id — Unique provider identifier (e.g. PRV-001)
+name — Provider's full name
+service — Primary service category (e.g. AC Technician, Plumber)
+specialization — List of specific skills within the service category
+verified — Whether the provider has been verified by ServeIQ
+
+Location
+
+area — Neighbourhood or sector (e.g. G-13)
+city — City name (e.g. Islamabad, Karachi)
+lat/lng — GPS coordinates for distance calculation
+
+Reputation & Reliability
+
+rating — Average star rating out of 5
+reviewCount — Total number of reviews received
+lastReviewDate — Date of most recent review (used for recency scoring)
+onTimeScore — Percentage of jobs completed on time (0 to 1)
+cancellationRate — Percentage of bookings cancelled (0 to 1, lower is better)
+riskScore — AI-calculated reliability risk score
+
+Pricing
+
+pricePerHour — Hourly labour rate in PKR
+visitFee — Fixed visit/call-out charge in PKR
+loyaltyDiscount — Discount offered to returning customers
+
+Availability & Capacity
+
+availability — Available time slots per day of the week
+capacity — Maximum simultaneous jobs the provider can handle
+
+Experience & Tools
+
+experience — Years of experience in the field
+tools — Equipment and tools the provider carries
+languages — Languages the provider communicates in
 
 ---
 
