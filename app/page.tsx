@@ -47,6 +47,37 @@ export default function LandingPage() {
         { value: "100%", label: "Agentic" },
     ];
 
+    const handleProvidersDemo = () => {
+        const mockData = {
+            service: "AC Repair",
+            location: "G-13, Islamabad",
+            reasoning: "Ranking Agent has scored these providers based on match quality, distance, and historical performance.",
+            providers: [
+                {
+                    id: "PRV-001",
+                    name: "Ustad Ahmed",
+                    specialization: "AC Technician",
+                    location: "0.5 km away",
+                    score: 96,
+                    stats: { rating: "4.9/5", onTime: "98%", cancellation: "0%", experience: "12 yrs" },
+                    price: { perHour: "1200", visitFee: "500" },
+                    sentiment: "Highly Reliable"
+                },
+                {
+                    id: "PRV-004",
+                    name: "CoolAir Technicians",
+                    specialization: "HVAC Experts",
+                    location: "1.2 km away",
+                    score: 91,
+                    stats: { rating: "4.8/5", "onTime": "94%", "cancellation": "1%", "experience": "8 yrs" },
+                    price: { perHour: "1500", "visitFee": "500" },
+                    sentiment: "Very Professional"
+                }
+            ]
+        };
+        router.push(`/providers?data=${encodeURIComponent(JSON.stringify(mockData))}`);
+    };
+
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
@@ -101,7 +132,33 @@ export default function LandingPage() {
                         Traces
                     </button>
                     <button
+                        onClick={() => router.push("/booking")}
+                        className="hidden md:block group relative px-5 py-2.5 rounded-full overflow-hidden"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 transition-all duration-300 group-hover:scale-105" />
+                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <span className="relative text-white text-sm font-semibold flex items-center gap-2">
+                            My Bookings
+                        </span>
+                    </button>
+                    <button
+                        onClick={handleProvidersDemo}
+                        className="hidden lg:block group relative px-5 py-2.5 rounded-full overflow-hidden"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 transition-all duration-300 group-hover:scale-105" />
+                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <span className="relative text-white text-sm font-semibold flex items-center gap-2">
+                            View Providers Demo
+                        </span>
+                    </button>
+                    <button
                         onClick={() => router.push("/chatbot")}
+                        className="text-sm text-slate-400 hover:text-white transition-colors"
+                    >
+                        Try Chatbot
+                    </button>
+                    <button
+                        onClick={() => router.push("/services")}
                         className="group relative px-5 py-2.5 rounded-full overflow-hidden"
                     >
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 transition-all duration-300 group-hover:scale-105" />
@@ -155,18 +212,30 @@ export default function LandingPage() {
                     </motion.div>
 
                     {/* CTA Buttons */}
-                    <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto justify-center">
+                    <motion.div variants={itemVariants} className="flex flex-col sm:flex-row flex-wrap gap-4 w-full max-w-4xl mx-auto justify-center">
                         <button
-                            onClick={() => router.push("/chatbot")}
+                            onClick={() => router.push("/services")}
                             className="group relative w-full sm:w-auto px-8 py-4 rounded-2xl bg-blue-600 text-white font-bold text-lg hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all duration-300 hover:-translate-y-1 overflow-hidden"
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                             <span className="relative flex items-center justify-center gap-2">
-                                Try ServeIQ Now
+                                🚀 Launch App
                                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>
                             </span>
+                        </button>
+                        <button
+                            onClick={() => router.push("/chatbot")}
+                            className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/5 border border-blue-500/30 text-white font-bold text-lg hover:bg-blue-500/10 hover:border-blue-500/60 transition-all duration-300 backdrop-blur-md"
+                        >
+                            💬 Try Chatbot
+                        </button>
+                        <button
+                            onClick={handleProvidersDemo}
+                            className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/5 border border-white/10 text-white font-bold text-lg hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300 backdrop-blur-md"
+                        >
+                            View Providers Demo
                         </button>
                         <button
                             onClick={() => router.push("/baseline")}
@@ -358,6 +427,12 @@ export default function LandingPage() {
                             className="text-xs sm:text-sm text-slate-400 hover:text-blue-400 transition-colors font-medium"
                         >
                             Dispute Center
+                        </button>
+                        <button
+                            onClick={() => router.push("/booking")}
+                            className="text-xs sm:text-sm text-slate-400 hover:text-blue-400 transition-colors font-medium"
+                        >
+                            My Bookings
                         </button>
                     </div>
                 </div>
