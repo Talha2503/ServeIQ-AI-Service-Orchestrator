@@ -9,38 +9,11 @@
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-*Google Antigravity Hackathon 2026 — AI Seekho Phase II — Challenge 2*
 
 </div>
 
 ---
 
-## 📌 Table of Contents
-
-- [Overview](#-overview)
-- [Live Demo](#-live-demo)
-- [Problem Statement](#-problem-statement)
-- [Solution](#-solution)
-- [Architecture](#-architecture)
-- [8 Antigravity Agents](#-8-antigravity-agents)
-- [Provider Dataset Schema](#-provider-dataset-schema)
-- [Matching Algorithm](#-matching-algorithm)
-- [Dynamic Pricing](#-dynamic-pricing)
-- [Multilingual Support](#-multilingual-support)
-- [Screens & Features](#-screens--features)
-- [Baseline Comparison](#-baseline-comparison)
-- [Tech Stack](#-tech-stack)
-- [Setup & Installation](#-setup--installation)
-- [Environment Variables](#-environment-variables)
-- [Antigravity Workflow](#-antigravity-workflow)
-- [Stress Test Scenarios](#-stress-test-scenarios)
-- [Cost & Latency Analysis](#-cost--latency-analysis)
-- [Scalability](#-scalability)
-- [Privacy Note](#-privacy-note)
-- [Limitations](#-limitations)
-- [Team](#-team)
-
----
 
 ## 🌟 Overview
 
@@ -144,17 +117,6 @@ Parses multilingual natural language input and extracts structured service inten
 **Outputs:** Service type, location, urgency, time preference, budget sensitivity, confidence score
 **Antigravity Role:** Language detection, entity extraction, confidence scoring, clarification questions
 
-```json
-{
-  "service": "AC Repair",
-  "location": "G-13, Islamabad",
-  "urgency": "high",
-  "timePreference": "tomorrow morning",
-  "budgetSensitive": true,
-  "language": "Roman Urdu",
-  "confidence": 0.94
-}
-```
 
 ---
 
