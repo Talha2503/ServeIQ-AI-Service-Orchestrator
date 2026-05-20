@@ -475,15 +475,6 @@ User Input (any language)
 
 ---
 
-## ⚠️ Limitations
-
-- Provider dataset is mock data (10+ providers) — not real-time
-- Maps/location is simulated — not connected to Google Maps API
-- SMS/WhatsApp notifications are simulated — not actually sent
-- Payment processing is simulated — no real transactions
-- Mobile app is WebView wrapper — not native Flutter
-- Dispute resolution is AI-recommended — not legally binding
-
 ---
 
 ## 👥 Team
