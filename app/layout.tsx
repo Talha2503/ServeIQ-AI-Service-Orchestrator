@@ -17,7 +17,7 @@ export const metadata = {
   description: "AI Service Orchestrator for Pakistan's Informal Economy — Powered by Google Antigravity",
   icons: {
     icon: "/serveiq_logo.svg",
-    apple: "/serveiq_logo.svg",
+    apple: "/apple-touch-icon.png",
   },
 };
 export default function RootLayout({
