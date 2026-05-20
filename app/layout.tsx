@@ -15,8 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "ServeIQ",
   description: "AI Service Orchestrator for Pakistan's Informal Economy — Powered by Google Antigravity",
+  icons: {
+    icon: "/serveiq_logo.svg",
+    apple: "/serveiq_logo.svg",
+  },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
